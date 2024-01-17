@@ -1,10 +1,19 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+const items = [
+  {icon: "test.svg", title: "test1"},
+  {icon: "test.svg", title: "test2"},
+  {icon: "test.svg", title: "test3"},
+]
+
 </script>
 
+
+
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -14,7 +23,15 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <main>
     <TheWelcome />
-  </main>
+  </main> -->
+  <h1>my website</h1>
+  <ul>
+    <li v-for="item in items">
+      <img :src="item.icon" alt="">
+      {{ item.title }}
+    </li>
+  </ul>
+
 </template>
 
 <style scoped>
